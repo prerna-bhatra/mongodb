@@ -7,6 +7,17 @@ Mc.connect(connectionURL,{useNewUrlParser:true},(error,client)=>{
 if(error)
 {
 	console.log("connection failed")
-	console.log("connected")
+	
 }
+//console.log("connected")
+var db=client.db(databaseName)
+db.collection('users').insertOne({
+	name:'Andrew',
+	age:27
+},(error,result)=>{
+	if (error) {
+		console.log("insert error")
+	}
+	console.log(result.ops)
+})
 })
