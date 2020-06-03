@@ -11,7 +11,7 @@ if(error)
 }
 //console.log("connected")
 var db=client.db(databaseName)
-db.collection('users').insertOne({
+/*db.collection('users').insertOne({
 	name:'Andrew',
 	age:27
 },(error,result)=>{
@@ -19,5 +19,18 @@ db.collection('users').insertOne({
 		console.log("insert error")
 	}
 	console.log(result.ops)
+})*/
+
+//find
+db.collection('users').findOne({name:'Andrew'},(error,user)=>
+{
+	if(error)
+	{
+		return console.log('failed to fetch')
+	}
+	console.log(user)
 })
+
 })
+
+
