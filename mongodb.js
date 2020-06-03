@@ -31,6 +31,16 @@ db.collection('users').findOne({name:'Andrew'},(error,user)=>
 	console.log(user)
 })
 
+//find multiple
+db.collection('users').find({age:27}).toArray((error,user)=>
+{
+	if(error)
+	{
+		return console.log('failed to fetch')
+	}
+	console.log(user)
+})
+
 })
 
 
