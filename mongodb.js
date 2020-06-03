@@ -41,6 +41,17 @@ db.collection('users').find({age:27}).toArray((error,user)=>
 	console.log(user)
 })
 
+//count
+
+db.collection('users').find({age:27}).count((error,count)=>
+{
+	if(error)
+	{
+		return console.log('failed to fetch')
+	}
+	console.log(count)
+})
+
 })
 
 
