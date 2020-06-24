@@ -3,6 +3,7 @@ const mongodb=require('mongodb')
 const Mc=mongodb.MongoClient
 const connectionURL='mongodb://127.0.0.1:27017'
 const databaseName='task-manager'
+const mongoose = require('mongoose');
 Mc.connect(connectionURL,{useNewUrlParser:true},(error,client)=>{
 if(error)
 {
@@ -22,7 +23,7 @@ var db=client.db(databaseName)
 })*/
 
 //find
-db.collection('users').findOne({name:'Andrew'},(error,user)=>
+/*db.collection('users').findOne({name:'Andrew'},(error,user)=>
 {
 	if(error)
 	{
@@ -50,8 +51,23 @@ db.collection('users').find({age:27}).count((error,count)=>
 		return console.log('failed to fetch')
 	}
 	console.log(count)
-})
+})*/
+//upsate to know more visit mongodb operators
 
+	const updatePromise=db.collection('users').updateOne({
+	_id:new  mongoose.Types.ObjectId("5ed4c8542a56ef2eaf8c3c3b")
+
+	},{
+		$set:{
+			name:'prerna'
+		}
+	})
+	updatePromise.then((result)=>{
+		console.log(result)
+
+	}).catch((error)=>{
+		console.log(error)
+	})
 })
 
 
