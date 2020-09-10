@@ -1,9 +1,7 @@
 const express=require("express")
 const router=new express.Router()
 const Task=require('../modeles/task')
-
-
-router.get('/tasks',async(req,res)=>
+router.get('/list',async(req,res)=>
 {
 	try
 	{
@@ -52,7 +50,7 @@ router.get('/tasks/:id',async(req,res)=>
 	})*/
 })
 
-router.post('/tasks',async(req,res)=>
+router.post('/add',async(req,res)=>
 {
 	/*console.log(req.body) //send data from body in postman raw json data {"varname":"val"} and send post request to this route
 	res.send("testing")*/

@@ -12,9 +12,6 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-
-
-
 app.listen(port,()=>
 {
 	console.log("server is upto "+
@@ -33,7 +30,7 @@ router.get('index',async(req,res)=>
 		res.send(task)
 	})*/
 /*})*/
-
+/*
 const jwt=require('jsonwebtoken')
 const bcrypt=require('bcryptjs')
 const myFunction=async() =>
@@ -47,7 +44,7 @@ const myFunction=async() =>
 	console.log(hashedpassword)
 
 	const isMatch=await bcrypt.compare('Red12345',hashedpassword)
-	console.log(isMatch)*/
+	console.log(isMatch)
 }
 
-myFunction()
+myFunction()*/

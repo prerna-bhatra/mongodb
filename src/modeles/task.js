@@ -3,15 +3,29 @@ const validator=require('validator')
 
 const Task=mongoose.model('Task',
 {
-	desc:
+	name:
 	{
 		type:String,
 		required:true
 
 	},
-	comp:
+	task:
 	{
-		type:Boolean
+		type:String,
+		required:true
+
+	},
+	dur:
+	{
+		type:Number,
+		required:true
+
+	},
+	desc:
+	{
+		type:String,
+		required:true
+
 	}
 })
 

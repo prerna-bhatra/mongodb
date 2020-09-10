@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 const validator=require('validator')
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
+mongoose.connect('mongodb+srv://prerna:Prerna123@cluster0.jokxx.mongodb.net/todo?retryWrites=true&w=majority',{
 	useUnifiedTopology:true ,
 	useNewUrlParser:true,
 	useCreateIndex:true
