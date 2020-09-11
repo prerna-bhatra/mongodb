@@ -26,7 +26,11 @@ const Task=mongoose.model('Task',
 		type:String,
 		required:true
 
-	}
+	},
+  date: {
+    type: Date,
+    default: Date.now
+  }
 })
 
 const task=new Task({
@@ -36,11 +40,8 @@ const task=new Task({
 
 module.exports=Task
 
-/*
-task.save().then(()=>
-{
 
-}).catch((error)=>
-{
-	console.log(error)
-})*/
+
+
+
+

@@ -13,6 +13,7 @@ router.get('/list',async(req,res)=>
 	res.status(500).send()	
 	}
 
+
 /*	Task.find({}).then((tasks)=>
 	{
 		res.send(tasks)
@@ -114,6 +115,7 @@ router.delete('/tasks/:id',async(req,res)=>
 	}
 
 })
+
 
 
 
